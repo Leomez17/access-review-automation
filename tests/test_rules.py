@@ -46,10 +46,8 @@ def test_dormant_or_test(view):
     assert "G36" not in hits  # break-glass is meant to be unused
 
 
-@pytest.mark.skip(reason="TODO: implement rule_service_account_risk")
 def test_service_account_risk(view):
     assert flagged(rules.rule_service_account_risk, view) == {"G35"}
-
 
 
 def test_shared_account(view):

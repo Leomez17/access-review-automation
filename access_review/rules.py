@@ -85,7 +85,12 @@ def rule_service_account_risk(view: pd.DataFrame, review_date: pd.Timestamp) -> 
     Hint: account_type == "service" and owner == "".
     Category: "Service account risk"
     """
-    return []  # TODO
+    hits = view[(view["account_type"] == "service") & (view["owner"] == "")]
+    return _findings(
+        hits,
+        "Service account risk",
+        lambda r: f"{r.account} is a service account with no named owner", 
+    )
 
 
 def rule_shared_account(view: pd.DataFrame, review_date: pd.Timestamp) -> list[Finding]:
