@@ -1,0 +1,17 @@
+emp_id,name,department,job_title,employment_type,status,end_date,previous_department,move_date,note
+E1001,Priya Shah,Finance,Accounts Payable Officer,Employee,Active,,,,
+E1002,Tom Okafor,Finance,Finance Manager,Employee,Active,,,,
+E1003,Hannah Lewis,IT,Service Desk Analyst,Employee,Active,,,,
+E1004,Marcus Reid,IT,Infrastructure Engineer,Employee,Active,,,,Owns backup service account
+E1005,Grace Bennett,Clinical,Ward Manager,Employee,Active,,,,
+E1006,Daniel Kim,HR,HR Advisor,Employee,Active,,Clinical,2026-07-01,Moved from Clinical Coding
+E1007,Sofia Marino,HR,HR Manager,Employee,Active,,,,
+E1008,James Turner,Finance,Payroll Officer,Employee,Leaver,2026-08-15,,,Previously owned svc-reporting
+E1009,Aisha Begum,Clinical,Staff Nurse,Employee,Long-term leave,,,,Maternity leave 2026-06-01 to 2027-03-01
+E1010,Oliver Grant,IT,IT Manager,Employee,Active,,,,Custodian of break-glass accounts
+E1011,Chloe Evans,Communications,Communications Officer,Employee,Active,,,,Intranet project ended 2026-06-30
+E1012,Ryan Patel,IT,Azure Engineer (Apex Digital),Contractor,Active,2026-09-30,,,Contract not extended
+E1013,Laura Chen,Finance,Accounts Payable Supervisor,Employee,Active,,Procurement,2026-05-01,Moved from Procurement Officer
+E1014,Ben Walsh,Estates,Estates Officer,Employee,Leaver,2026-07-31,,,
+E1015,Fatima Noor,Clinical,Consultant Physician,Employee,Active,,,,
+E1016,Kieran Doyle,IT,Security Analyst,Employee,Active,,,,

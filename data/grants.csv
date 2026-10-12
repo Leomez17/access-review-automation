@@ -1,0 +1,41 @@
+grant_id,account,system,entitlement,tier,assignment,entitlement_department
+G01,priya.shah,FinanceHub,Accounts payable processing,standard,,Finance
+G02,priya.shah,Entra ID,GRP-Finance-Users,standard,,Finance
+G03,tom.okafor,FinanceHub,Approve payments,sensitive,,Finance
+G04,tom.okafor,VPN,Remote access,standard,,All
+G05,hannah.lewis,Active Directory,Delegated password reset (staff OUs),sensitive,,IT
+G06,hannah.lewis,Active Directory,Domain Admins,admin,permanent,IT
+G07,marcus.reid,Entra ID,GRP-IT-Staff,standard,,IT
+G08,adm.marcus.reid,Active Directory,Domain Admins,admin,permanent,IT
+G09,adm.marcus.reid,Azure,"Contributor, production subscription",admin,permanent,IT
+G10,grace.bennett,CareRecord EPR,Ward Manager,standard,,Clinical
+G11,daniel.kim,CareRecord EPR,Clinical Coder (full patient record read),sensitive,,Clinical
+G12,daniel.kim,HRConnect,HR Advisor,standard,,HR
+G13,sofia.marino,HRConnect,HR Administrator,sensitive,,HR
+G14,sofia.marino,Payroll,Payroll approver,sensitive,,HR;Finance
+G15,james.turner,Payroll,Payroll processor,sensitive,,Finance
+G16,james.turner,VPN,Remote access,standard,,All
+G17,aisha.begum,CareRecord EPR,Staff Nurse,standard,,Clinical
+G18,oliver.grant,Entra ID,GRP-IT-Managers,standard,,IT
+G19,adm.oliver.grant,Entra ID,Global Administrator,admin,permanent,IT
+G20,chloe.evans,Entra ID,Global Administrator,admin,permanent,IT
+G21,chloe.evans,SharePoint,Intranet site owner,standard,,Communications
+G22,ryan.patel.ext,Azure,"Owner, production subscription",admin,permanent,IT
+G23,ryan.patel.ext,VPN,Remote access,standard,,All
+G24,laura.chen,FinanceHub,Supplier maintenance (create and amend suppliers),sensitive,,Procurement
+G25,laura.chen,FinanceHub,Approve payments,sensitive,,Finance
+G26,ben.walsh,Estates BMS,Building management admin,admin,,Estates
+G27,ben.walsh,Physical access,Data centre door,sensitive,,IT;Estates
+G28,fatima.noor,CareRecord EPR,Consultant,standard,,Clinical
+G29,kieran.doyle,Microsoft Sentinel,Microsoft Sentinel Responder,sensitive,,IT
+G30,kieran.doyle,Entra ID,Security Reader,standard,,IT
+G31,mark.hughes,FinanceHub,Accounts payable processing,standard,,Finance
+G32,mark.hughes,VPN,Remote access,standard,,All
+G33,finance.shared,FinanceHub,Payment run operator,sensitive,,Finance
+G34,svc-backup,Active Directory,Backup Operators,admin,permanent,IT
+G35,svc-reporting,Active Directory,Domain Admins,admin,permanent,IT
+G36,bg-admin-01,Entra ID,Global Administrator,admin,permanent,IT
+G37,test.user01,CareRecord EPR,Test clinician,sensitive,,Clinical
+G38,grace.bennett,VPN,Remote access,standard,,All
+G39,fatima.noor,VPN,Remote access,standard,,All
+G40,priya.shah,VPN,Remote access,standard,,All

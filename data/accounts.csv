@@ -1,0 +1,25 @@
+account,emp_id,account_type,enabled,last_sign_in,owner
+priya.shah,E1001,user,yes,2026-10-10,
+tom.okafor,E1002,user,yes,2026-10-11,
+hannah.lewis,E1003,user,yes,2026-10-12,
+marcus.reid,E1004,user,yes,2026-10-12,
+adm.marcus.reid,E1004,admin,yes,2026-10-09,Marcus Reid
+grace.bennett,E1005,user,yes,2026-10-11,
+daniel.kim,E1006,user,yes,2026-10-12,
+sofia.marino,E1007,user,yes,2026-10-09,
+james.turner,E1008,user,yes,2026-08-14,
+aisha.begum,E1009,user,yes,2026-05-30,
+oliver.grant,E1010,user,yes,2026-10-12,
+adm.oliver.grant,E1010,admin,yes,2026-10-08,Oliver Grant
+chloe.evans,E1011,user,yes,2026-10-10,
+ryan.patel.ext,E1012,guest,yes,2026-09-29,
+laura.chen,E1013,user,yes,2026-10-12,
+ben.walsh,E1014,user,yes,2026-07-30,
+fatima.noor,E1015,user,yes,2026-10-11,
+kieran.doyle,E1016,user,yes,2026-10-12,
+mark.hughes,,user,yes,2026-03-02,
+finance.shared,,shared,yes,2026-10-08,
+svc-backup,,service,yes,2026-10-12,Marcus Reid
+svc-reporting,,service,yes,2026-10-11,
+bg-admin-01,,break_glass,yes,,Oliver Grant
+test.user01,,test,yes,2025-11-20,

@@ -1,0 +1,41 @@
+grant_id,expected_decision,expected_category
+G01,keep,
+G02,keep,
+G03,keep,
+G04,keep,
+G05,keep,
+G06,revoke,Excessive privilege
+G07,keep,
+G08,keep,
+G09,keep,
+G10,keep,
+G11,revoke,Role change (mover)
+G12,keep,
+G13,keep,
+G14,keep,
+G15,revoke,Leaver
+G16,revoke,Leaver
+G17,keep,
+G18,keep,
+G19,modify,Standing admin
+G20,revoke,Excessive privilege
+G21,keep,
+G22,revoke,Contract ended
+G23,revoke,Contract ended
+G24,revoke,Segregation of duties
+G25,keep,
+G26,revoke,Leaver
+G27,revoke,Leaver
+G28,keep,
+G29,keep,
+G30,keep,
+G31,revoke,Orphaned account
+G32,revoke,Orphaned account
+G33,revoke,Shared account
+G34,keep,
+G35,revoke,Service account risk
+G36,keep,
+G37,revoke,Dormant or test account
+G38,keep,
+G39,keep,
+G40,keep,
