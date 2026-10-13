@@ -59,7 +59,6 @@ def test_segregation_of_duties(view):
     assert flagged(rules.rule_segregation_of_duties, view) == {"G24"}
 
 
-@pytest.mark.skip(reason="TODO: implement rule_excessive_privilege")
 def test_excessive_privilege(view):
     hits = flagged(rules.rule_excessive_privilege, view)
     assert hits == {"G06", "G20", "G22", "G26"}  # G26 is also a leaver: one grant can break several rules
