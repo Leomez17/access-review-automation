@@ -38,7 +38,6 @@ def test_contract_ended(view):
     assert flagged(rules.rule_contract_ended, view) == {"G22", "G23"}
 
 
-@pytest.mark.skip(reason="TODO: implement rule_dormant_or_test")
 def test_dormant_or_test(view):
     hits = flagged(rules.rule_dormant_or_test, view)
     assert hits == {"G31", "G32", "G37"}
@@ -65,7 +64,6 @@ def test_excessive_privilege(view):
     assert "G08" not in hits  # named admin account is the right place for Domain Admins
 
 
-@pytest.mark.skip(reason="TODO: implement rule_standing_admin")
 def test_standing_admin(view):
     assert flagged(rules.rule_standing_admin, view) == {"G19"}
 

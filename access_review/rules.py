@@ -76,7 +76,20 @@ def rule_dormant_or_test(view: pd.DataFrame, review_date: pd.Timestamp) -> list[
     (they should never sign in). Watch out for empty last_sign_in (NaT).
     Category: "Dormant or test account"
     """
-    return []  # TODO
+    days_since = (review_date - view["last_sign_in"]).dt.days
+    dormant = (
+        (days_since >= 90)
+        & (view["enabled"] == "yes")
+        & (view["status"] != "Long-term leave")
+        & (view["account_type"] != "break_glass")
+    )
+    is_test = view["account_type"] == "test"
+    hits = view[dormant | is_test]
+    return _findings(
+        hits,
+        "Dormant or test account",
+        lambda r: f"{r.account} ({r.account_type}) last signed in {r.last_sign_in:%d/%m/%Y}",
+    )
 
 
 def rule_service_account_risk(view: pd.DataFrame, review_date: pd.Timestamp) -> list[Finding]:
@@ -144,7 +157,17 @@ def rule_standing_admin(view: pd.DataFrame, review_date: pd.Timestamp) -> list[F
     account_type == "admin". (Break-glass accounts are excluded by design.)
     Category: "Standing admin"
     """
-    return []  # TODO
+    hits = view[
+        (view["system"] == "Entra ID")
+        & (view["tier"] == "admin")
+        & (view["assignment"] == "permanent")
+        & (view["account_type"] == "admin")
+    ]
+    return _findings(
+        hits,
+        "Standing admin",
+        lambda r: f"{r.account} holds '{r.entitlement}' permanently: make it eligible through PIM",
+    )
 
 
 def rule_access_outside_department(view: pd.DataFrame, review_date: pd.Timestamp) -> list[Finding]:
