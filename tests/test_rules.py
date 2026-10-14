@@ -68,6 +68,5 @@ def test_standing_admin(view):
     assert flagged(rules.rule_standing_admin, view) == {"G19"}
 
 
-@pytest.mark.skip(reason="TODO: implement rule_access_outside_department")
 def test_access_outside_department(view):
     assert flagged(rules.rule_access_outside_department, view) == {"G11", "G20", "G24"}

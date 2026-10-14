@@ -178,7 +178,18 @@ def rule_access_outside_department(view: pd.DataFrame, review_date: pd.Timestamp
     not in that list. This is how movers' leftover access shows up.
     Category: "Role change (mover)"
     """
-    return []  # TODO
+    def outside(row) -> bool:
+        if row["department"] == "":
+            return False  # no HR record: the orphaned-account rule covers these
+        allowed = row["entitlement_department"].split(";")
+        return "All" not in allowed and row["department"] not in allowed
+
+    hits = view[view.apply(outside, axis=1)]
+    return _findings(
+        hits,
+        "Role change (mover)",
+        lambda r: f"{r.name} ({r.department}) holds '{r.entitlement}', which belongs to {r.entitlement_department}",
+    )
 
 
 ALL_RULES = [
