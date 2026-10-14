@@ -53,7 +53,6 @@ def test_shared_account(view):
     assert flagged(rules.rule_shared_account, view) == {"G33"}
 
 
-@pytest.mark.skip(reason="TODO: implement rule_segregation_of_duties")
 def test_segregation_of_duties(view):
     assert flagged(rules.rule_segregation_of_duties, view) == {"G24"}
 

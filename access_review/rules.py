@@ -132,7 +132,19 @@ def rule_segregation_of_duties(view: pd.DataFrame, review_date: pd.Timestamp) ->
     grant for the FIRST entitlement in the pair (the one to remove).
     Category: "Segregation of duties"
     """
-    return []  # TODO
+    findings = []
+    people = view[view["emp_id"] != ""]
+    for emp_id, person in people.groupby("emp_id"):
+        held = set(person["entitlement"])
+        for first, second in SOD_PAIRS:
+            if first in held and second in held:
+                hits = person[person["entitlement"] == first]
+                findings += _findings(
+                    hits,
+                    "Segregation of duties",
+                    lambda r: f"{r.name} holds both '{first}' and '{second}'",
+                )
+    return findings
 
 
 def rule_excessive_privilege(view: pd.DataFrame, review_date: pd.Timestamp) -> list[Finding]:
