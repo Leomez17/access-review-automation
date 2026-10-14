@@ -129,12 +129,13 @@ def rule_excessive_privilege(view: pd.DataFrame, review_date: pd.Timestamp) -> l
     Admin roles belong on separate named admin accounts.
     Category: "Excessive privilege"
     """
-    hits = view[(view["tier"] == "admin") & view["account_type"].isin (["user","guest"])]
+    hits = view[(view["tier"] == "admin") & view["account_type"].isin(["user", "guest"])]
     return _findings(
         hits,
         "Excessive privilege",
-        lambda r: f"{r.account} holds admin-tier '{r.entitlement}' on everyday {r.account_type} account", 
+        lambda r: f"{r.account} holds admin-tier '{r.entitlement}' on an everyday {r.account_type} account",
     )
+
 
 def rule_standing_admin(view: pd.DataFrame, review_date: pd.Timestamp) -> list[Finding]:
     """A permanent Entra ID admin role on an admin account: make it just-in-time (PIM).
