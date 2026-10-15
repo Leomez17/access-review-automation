@@ -37,3 +37,13 @@ python -m access_review.run
 
 - Replace the sample CSVs with real exports from Active Directory (`Get-ADUser`, `Get-ADGroupMember`) or Entra ID (Microsoft Graph PowerShell).
 - Turn the leaver and dormant-account rules into Microsoft Sentinel analytics rules.
+
+## Results
+
+All 16 expected risky grants found, in the right category, with no false positives. 12 automated tests pass, one or more per rule.
+
+![12 of 12 tests passing](evidence/01-tests-passing.png)
+
+![Findings and score: 16/16, no false positives](evidence/02-findings-and-score.png)
+
+The same controls are enforced in Microsoft Entra ID in [entra-identity-governance-lab](https://github.com/Leomez17/entra-identity-governance-lab).
